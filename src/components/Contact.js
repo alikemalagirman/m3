@@ -141,8 +141,7 @@ export default function Contact(props){
     const matchesXS= useMediaQuery(theme.breakpoints.down("xs"));
 
     const onConfirm = () => {   
-        const cors = 'https://cors-anywhere.herokuapp.com/';  
-        axios.get(`${cors}us-central1-material-ui-course-efc24.cloudfunctions.net/sendMail`)
+        axios.get("https://us-central1-material-ui-course-efc24.cloudfunctions.net/sendMail")
         .then(res => console.log(res))
         .catch(err => console.log(err))
     }
